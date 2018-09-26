@@ -5,6 +5,13 @@
  */
 package practicacreacionales;
 
+import practica.abstractFactory3.AbstractFactoryCombo;
+import practica.abstractFactory3.FactoryCombo1;
+import practica.abstractFactory3.FactoryCombo2;
+import practica.abstractFactory3.FactoryCombo3;
+import practica.abstractFactory3.FactoryCombo4;
+import practica.abstractFactory3.Hamburguesa;
+import practica.abstractFactory3.Refresco;
 import practica.builder1.Admin;
 import practica.builder1.C10Builder;
 import practica.builder1.CEstandarBuilder;
@@ -63,6 +70,51 @@ public class PracticaCreacionales {
         creadorGUI.setCreadorGUI(creadorGUIOscuro);
         creadorGUI.armarGUI();
         System.out.println("La GUI creada es " + creadorGUI.getGUI());
+        
+        
+        //Prueba de funcionamiento de abstractFactory ejercicio 3
+        
+        //Son 4 combos
+        //Combo 1 Hamburguesa de Verduras y Refresco natural
+        //Combo 2 Hamburguesa de Verduras y Refresco gaseoso
+        //Combo 3 Hamburguesa de Pollo y Refresco Natural
+        //Combo 4 Hamburguesa de Pollo y Refresco Gaseoso
+        
+        AbstractFactoryCombo fabrica = new FactoryCombo1();
+        Hamburguesa unaHamburguesa = fabrica.getHamburguesa();
+        Refresco unRefresco = fabrica.getRefresco();
+        unaHamburguesa.crearHamburguesa();
+        unRefresco.crearRefresco();
+        
+        System.out.println("Combo 1");
+        System.out.println("El combo es de: "+unaHamburguesa+" y un "+unRefresco);
+        
+        fabrica = new FactoryCombo2();
+        unaHamburguesa = fabrica.getHamburguesa();
+        unRefresco = fabrica.getRefresco();
+        unaHamburguesa.crearHamburguesa();
+        unRefresco.crearRefresco();
+        
+        System.out.println("Combo 2");
+        System.out.println("El combo es de: "+unaHamburguesa+" y un "+unRefresco);
+        
+        fabrica = new FactoryCombo3();
+        unaHamburguesa = fabrica.getHamburguesa();
+        unRefresco = fabrica.getRefresco();
+        unaHamburguesa.crearHamburguesa();
+        unRefresco.crearRefresco();
+        
+        System.out.println("Combo 3");
+        System.out.println("El combo es de: "+unaHamburguesa+" y un "+unRefresco);
+        
+        fabrica = new FactoryCombo4();
+        unaHamburguesa = fabrica.getHamburguesa();
+        unRefresco = fabrica.getRefresco();
+        unaHamburguesa.crearHamburguesa();
+        unRefresco.crearRefresco();
+        
+        System.out.println("Combo 4");
+        System.out.println("El combo es de: "+unaHamburguesa+" y un "+unRefresco);
         
         // Prueba de uso del patrón Singleton ejercicio 7
         

@@ -52,7 +52,7 @@ public class Cuenta {
 
     @Override
     public String toString() {
-        return "Cuenta{" + "Interes=" + porcentajeInteres + ", Tarjeta Debito=" + tarjetaDebito + ", Tarjeta Credito=" + tarjetaCredito +", Regalo=" + regalo + '}';
+        return "Cuenta{ Interes=" + porcentajeInteres + ", Tarjeta Debito=" + tarjetaDebito + ", Tarjeta Credito=" + tarjetaCredito +", Regalo=" + regalo + '}';
     }
     
     
